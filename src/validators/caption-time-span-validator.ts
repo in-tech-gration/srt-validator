@@ -37,7 +37,7 @@ export default class CaptionTimeSpanValidator extends BaseValidator {
         if (previousEndTime > start) {
           this.addToResult({
             errorCode: ERROR_CODE.VALIDATOR_ERROR_END_TIME,
-            message: 'start time should be less than previous end time',
+            message: 'start time should be greater than previous end time',
             lineNumber: lineNumbers.timeSpan + 1, // lineNumber is 0-indexed
             validator: this.validator,
           });
